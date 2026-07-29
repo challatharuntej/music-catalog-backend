@@ -1,0 +1,9 @@
+spring.datasource.url=jdbc:mysql://localhost:3306/music_catalog
+spring.datasource.username=root
+spring.datasource.password=YOUR_PASSWORD_HERE
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+jwt.secret=YOUR_JWT_SECRET_HERE
+jwt.expiration=86400000
+server.port=8081
+anthropic.api.key=YOUR_ANTHROPIC_KEY_HERE
