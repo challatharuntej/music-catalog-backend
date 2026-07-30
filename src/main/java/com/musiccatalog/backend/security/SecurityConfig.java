@@ -48,8 +48,13 @@ public class SecurityConfig {
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration config = new CorsConfiguration();
-        // Allows Vercel frontend and any other origin to make requests
-        config.setAllowedOriginPatterns(List.of("*"));
+        
+        // Explicitly whitelist your exact Vercel URL and localhost
+        config.setAllowedOrigins(List.of(
+            "https://music-catalog-frontend.vercel.app", 
+            "http://localhost:3000"
+        ));
+        
         config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         config.setAllowedHeaders(List.of("*"));
         config.setAllowCredentials(true);
